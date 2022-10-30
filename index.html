@@ -1,30 +1,68 @@
 <!DOCTYPE html>
     <script type = "text/javascript">
         var ver="1.19.40";
+        function load(percent){
+            document.getElementById("load").value = percent;
+        }
         function injectHack() {  
         if(document.getElementById("injectionButton").innerHTML !== "Injected! - Click again to abort"){
             alert("Injecting NigHorion...");
-            alert("Downloading assets... (13%)");
-            alert("Downloading assets... (32%)");
-            alert("Downloading assets... (100%)");
-            alert("Injecting DLL.. (1/3)");
-            alert("Injecting DLL.. (2/3)");
-            alert("Injecting DLL.. (3/3)");
-            r = Math.random()*10000000000000000.141;
-            alert("Finished injecting NigHorion v0.0.1! Your process ID is "+r);
+            r = Math.random()*100000000000000000.141;
             change();
+            
+            var kkk;
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 500);
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 1000);
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (60 - 40 + 1)) + 40;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 1500);
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (80 - 60 + 1)) + 60;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 2000);
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (90 - 80 + 1)) + 80;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 2500);
+            setTimeout(function(){
+                kkk=Math.floor(Math.random() * (95 - 90 + 1)) + 90;
+                load(kkk);
+                document.getElementById("progress").innerHTML = "Progress: "+kkk+"%";
+            }, 3000);
+            setTimeout(function(){
+                load(100);
+                document.getElementById("progress").innerHTML = "Progress: 100% (FINISHED INJECTING!)";
+                document.getElementById("PID").innerHTML = "<hr>Process ID: "+r;
+                alert("Finished injecting NigHorion v0.0.4! Your process ID is "+r);
+            }, 3500);
+            
         }
         else{
             alert("Aborted Process ID "+r);
             document.getElementById("injectionButton").innerHTML = "Inject DLL";
-            document.getElementById("title").innerHTML = "NigHorion Client v0.0.1 - NOT INJECTED";
+            document.getElementById("title").innerHTML = "NigHorion Client v0.0.4 - NOT INJECTED";
+            document.getElementById("PID").innerHTML = "";
+            document.getElementById("load").value = 0;
+            document.getElementById("progress").innerHTML = "Progress: 0% (NOT BEING INJECTED)";
         }
         }
     </script>
     <script>
         function change() {
             document.getElementById("injectionButton").innerHTML = "Injected! - Click again to abort";
-            document.getElementById("title").innerHTML = "NigHorion Client v0.0.1 - INJECTED";
+            document.getElementById("title").innerHTML = "NigHorion Client v0.0.4 - INJECTED";
             return false;
         }
     </script>
@@ -32,30 +70,66 @@
     
     <head>
         <title>NigHorion</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <h1 id="title">NigHorion Client v0.0.1 - NOT INJECTED</h1>
-        <h3>developed by Horion team frfr</h1>
-        <p>This the only client that supports minecraft bedrock edition 1.12-1.19.40 Trust</p>
-        <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
-        <br><br><br><br>
-        <button id="injectionButton" type="button" onclick = "injectHack()">Inject DLL</button>
-        <br><br>
-        <h1 id="version">VERSION CONTROL - current minecraft version selected is</h1>
+        <div class="griddy">
+            <h1 id="title">NigHorion Client v0.0.4 - NOT INJECTED</h1>
+            <h3>developed by Horion team frfr</h1>
+            <p>This the only client that supports minecraft bedrock edition 1.12-1.19.40 Trust</p>
+            <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
+            <br><br><br><br>
+        </div>    
+        <div class="injectionGroup">
+            <button id="injectionButton" type="button" onclick = "injectHack()">Inject DLL</button>
+        </div>
         <br>
-        <button id="injectionButton" type="button" onclick = "var1()">Select minecraft 1.12.1 (OLDEST)</button>
-        <br>
-        <button id="injectionButton" type="button" onclick = "var2()">Select minecraft 1.13.3</button>
-        <br>
-        <button id="injectionButton" type="button" onclick = "var3()">Select minecraft 1.14.60</button> 
-        <br>
-        <button id="injectionButton" type="button" onclick = "var4()">Select minecraft 1.16.221</button>
-        <br>
-        <button id="injectionButton" type="button" onclick = "var5()">Select minecraft 1.17.41</button>
-        <br>
-        <button id="injectionButton" type="button" onclick = "var6()">Select minecraft 1.18.33</button>
-        <br>
-        <button id="injectionButton" type="button" onclick = "var7()">Select minecraft 1.19.40 (LATEST)</button>
+        <div class="loadingSec">
+            <progress id="load" value = "0" max = "100"></progress>
+            <h3 id="progress">Progress: 0% (NOT BEING INJECTED)</h3>
+        </div>
+        <h1 id="PID"></h1>
+        <hr>
+        
+            <br><br>
+            <h1 id="version">VERSION CONTROL - current minecraft version selected is</h1>
+            <br>
+            <button type="button" onclick = "var1()">Select minecraft 1.12.1 (OLDEST)</button>
+            <br>
+            <button type="button" onclick = "var2()">Select minecraft 1.13.3</button>
+            <br>
+            <button type="button" onclick = "var3()">Select minecraft 1.14.60</button> 
+            <br>
+            <button type="button" onclick = "var4()">Select minecraft 1.16.221</button>
+            <br>
+            <button type="button" onclick = "var5()">Select minecraft 1.17.41</button>
+            <br>
+            <button type="button" onclick = "var6()">Select minecraft 1.18.33</button>
+            <br>
+            <button type="button" onclick = "var7()">Select minecraft 1.19.40 (LATEST)</button>
+        
+            
+            <br><hr><br>
+            <h1 id="cl">Changelog</h1>
+            <br>
+            <h2>Update 0.0.1</h2>
+            <h3>NigHorion was realeased</h3><br>
+            <h2>Update 0.0.2</h2>
+            <h3>- Version switcher was added</h3>
+            <h3>- Improved UI</h3><br>
+            <h2>Update 0.0.3</h2>
+            <h3>- Added changelogs section (This)</h3>
+            <h3>- Added process ID display after injection (at the bottom of the page)</h3><br>
+            <h2>Update 0.0.4</h2>
+            <h3>- Separated version selector from injecting section</h3>
+            <h3>- Added progress bar to injection status</h3>
+            <h3>- Aligned the injection section to center</h3>
+
+            <br><hr><br>
+
+            
+
+        
         <script>
             document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
             function var1(){
