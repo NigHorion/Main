@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <script type = "text/javascript">
+        function injectHack() {  
+        if(document.getElementById("injectionButton").innerHTML !== "Injected! - Click again to abort"){
+            alert("Injecting NigHorion...");
+            alert("Downloading assets... (13%)");
+            alert("Downloading assets... (32%)");
+            alert("Downloading assets... (100%)");
+            alert("Injecting DLL.. (1/3)");
+            alert("Injecting DLL.. (2/3)");
+            alert("Injecting DLL.. (3/3)");
+            r = Math.random()*10000000000000000.141;
+            alert("Finished injecting NigHorion v0.0.1! Your process ID is "+r);
+            change();
+        }
+        else{
+            alert("Aborted Process ID "+r);
+            document.getElementById("injectionButton").innerHTML = "Inject DLL";
+        }
+        }
+    </script>
+    <script>
+        function change() {
+            document.getElementById("injectionButton").innerHTML = "Injected! - Click again to abort";
+            return false;
+        }
+    </script>
+<html>
+    
+    <head>
+        <title>NigHorion</title>
+    </head>
+    <body>
+        <h1>NigHorion Client v0.0.1</h1>
+        <h3>developed by Horion team frfr</h1>
+        <p>This the only client that supports minecraft bedrock edition 1.12-1.19.40 Trust</p>
+        <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
+        <br><br><br><br>
+        <button id="injectionButton" type="button" onclick = "injectHack()">Inject DLL</button>
+        
+    </body>
+    
+</html>
