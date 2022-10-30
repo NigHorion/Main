@@ -16,12 +16,14 @@
         else{
             alert("Aborted Process ID "+r);
             document.getElementById("injectionButton").innerHTML = "Inject DLL";
+            document.getElementById("title").innerHTML = "NigHorion Client v0.0.1 - NOT INJECTED";
         }
         }
     </script>
     <script>
         function change() {
             document.getElementById("injectionButton").innerHTML = "Injected! - Click again to abort";
+            document.getElementById("title").innerHTML = "NigHorion Client v0.0.1 - INJECTED";
             return false;
         }
     </script>
@@ -31,7 +33,7 @@
         <title>NigHorion</title>
     </head>
     <body>
-        <h1>NigHorion Client v0.0.1</h1>
+        <h1 id="title">NigHorion Client v0.0.1 - NOT INJECTED</h1>
         <h3>developed by Horion team frfr</h1>
         <p>This the only client that supports minecraft bedrock edition 1.12-1.19.40 Trust</p>
         <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
