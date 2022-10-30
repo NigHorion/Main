@@ -8,7 +8,7 @@
         if(document.getElementById("injectionButton").innerHTML !== "Injected! - Click again to abort"){
             alert("Injecting NigHorion...");
             r = Math.random()*100000000000000000.141;
-            change();
+            
             
             var kkk;
             setTimeout(function(){
@@ -46,12 +46,13 @@
                 document.getElementById("progress").innerHTML = "Progress: 100% (FINISHED INJECTING!)";
                 document.getElementById("PID").innerHTML = "<hr>Process ID: "+r;
                 alert("Finished injecting NigHorion v0.0.4! Your process ID is "+r);
+                change();
             }, 3500);
             
         }
         else{
             alert("Aborted Process ID "+r);
-            document.getElementById("injectionButton").innerHTML = "Inject DLL";
+            document.getElementById("injectionButton").innerHTML = "Click to inject DLL";
             document.getElementById("title").innerHTML = "NigHorion Client v0.0.4 - NOT INJECTED";
             document.getElementById("PID").innerHTML = "";
             document.getElementById("load").value = 0;
@@ -74,23 +75,25 @@
     </head>
     <body>
         <div class="griddy">
-            <h1 id="title">NigHorion Client v0.0.4 - NOT INJECTED</h1>
+            <h1 id="title">NigHorion Client v0.0.5 - NOT INJECTED</h1>
             <h3>developed by Horion team frfr</h1>
             <p>This the only client that supports minecraft bedrock edition 1.12-1.19.40 Trust</p>
             <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
             <br><br><br><br>
         </div>    
+        <br>
         <div class="injectionGroup">
-            <button id="injectionButton" type="button" onclick = "injectHack()">Inject DLL</button>
+            <button id="injectionButton" type="button" onclick = "injectHack()">Click to inject DLL</button>
         </div>
         <br>
         <div class="loadingSec">
+            <br>
             <progress id="load" value = "0" max = "100"></progress>
-            <h3 id="progress">Progress: 0% (NOT BEING INJECTED)</h3>
+            <h3 id="progress">Progress: 0% (NOT BEING INJECTED)</h3><br>
         </div>
         <h1 id="PID"></h1>
         <hr>
-        
+        <div class="versionSec">
             <br><br>
             <h1 id="version">VERSION CONTROL - current minecraft version selected is</h1>
             <br>
@@ -107,24 +110,27 @@
             <button type="button" onclick = "var6()">Select minecraft 1.18.33</button>
             <br>
             <button type="button" onclick = "var7()">Select minecraft 1.19.40 (LATEST)</button>
-        
+        </div>
             
             <br><hr><br>
-            <h1 id="cl">Changelog</h1>
-            <br>
-            <h2>Update 0.0.1</h2>
-            <h3>NigHorion was realeased</h3><br>
-            <h2>Update 0.0.2</h2>
-            <h3>- Version switcher was added</h3>
-            <h3>- Improved UI</h3><br>
-            <h2>Update 0.0.3</h2>
-            <h3>- Added changelogs section (This)</h3>
-            <h3>- Added process ID display after injection (at the bottom of the page)</h3><br>
-            <h2>Update 0.0.4</h2>
-            <h3>- Separated version selector from injecting section</h3>
-            <h3>- Added progress bar to injection status</h3>
-            <h3>- Aligned the injection section to center</h3>
-
+            <div class="cl">
+                <h1>Changelog</h1>
+                <br>
+                <h2>Update 0.0.1</h2>
+                <h3>NigHorion was realeased</h3><br>
+                <h2>Update 0.0.2</h2>
+                h3>- Version switcher was added</h3>
+                <h3>- Improved UI</h3><br>
+                <h2>Update 0.0.3</h2>
+                <h3>- Added changelogs section (This)</h3>
+                <h3>- Added process ID display after injection (at the bottom of the page)</h3><br>
+                <h2>Update 0.0.4</h2>
+                <h3>- Separated version selector from injecting section</h3>
+                <h3>- Added progress bar to injection status</h3>
+                <h3>- Aligned the injection section to center</h3><br>
+                <h2>Update 0.0.5</h2>
+                <h3>- Added colors to client    
+            </div>    
             <br><hr><br>
 
             

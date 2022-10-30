@@ -1,6 +1,6 @@
 .griddy{
     display: flex;
-    
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     justify-content: space-evenly;
 }
 
@@ -9,8 +9,9 @@
 }
 
 #injectionButton{
+    /*background-image: linear-gradient(to right top, #afd524, #1bdf56, #938200, #bf9900, #a8eb12);*/
     width: 100%;
-    height: 120px;
+    height: 100px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
@@ -18,6 +19,16 @@
 
 .loadingSec{
     text-align: center;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.cl{
+    background-image: linear-gradient(to right top, #afd524, #1bdf56, #930073, #bf9900, #a8eb12);
+}
+
+.versionSec{
+    text-align: center;
+    background-image: linear-gradient(to right top, #afd524, #1bdf56, #938200, #bf9900, #a8eb12);
 }
 
 
