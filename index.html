@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <script type = "text/javascript">
+        var ver="1.19.40";
         function injectHack() {  
         if(document.getElementById("injectionButton").innerHTML !== "Injected! - Click again to abort"){
             alert("Injecting NigHorion...");
@@ -39,7 +40,53 @@
         <img src="https://cdn.discordapp.com/attachments/801538444316639252/1036129567020167229/blackman.jpg">
         <br><br><br><br>
         <button id="injectionButton" type="button" onclick = "injectHack()">Inject DLL</button>
-        
+        <br><br>
+        <h1 id="version">VERSION CONTROL - current minecraft version selected is</h1>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var1()">Select minecraft 1.12.1 (OLDEST)</button>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var2()">Select minecraft 1.13.3</button>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var3()">Select minecraft 1.14.60</button> 
+        <br>
+        <button id="injectionButton" type="button" onclick = "var4()">Select minecraft 1.16.221</button>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var5()">Select minecraft 1.17.41</button>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var6()">Select minecraft 1.18.33</button>
+        <br>
+        <button id="injectionButton" type="button" onclick = "var7()">Select minecraft 1.19.40 (LATEST)</button>
+        <script>
+            document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            function var1(){
+                ver="1.12.1";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var2(){
+                ver="1.13.3";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var3(){
+                ver="1.14.60";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var4(){
+                ver="1.16.221";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var5(){
+                ver="1.17.41";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var6(){
+                ver="1.18.33";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+            function var7(){
+                ver="1.19.40";
+                document.getElementById("version").innerHTML = "VERSION CONTROL - current minecraft version selected is "+ver;
+            }
+        </script>
     </body>
     
 </html>
